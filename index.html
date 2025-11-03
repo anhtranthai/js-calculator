@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+      .calculator {
+        width: 300px;
+        background-color: #222;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      .result {
+        background-color: #444;
+        color: white;
+        font-size: 2em;
+        text-align: right;
+        padding: 20px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+      }
+      .layout div {
+        background-color: #333;
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      .layout .top {
+        background-color: #555;
+      }
+      .layout .op {
+        background-color: #ff9500;
+      }
+      .layout .zero {
+        grid-column: span 2;
+      }
+    </style>
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="result">0</div>
+      <div class="layout">
+        <div class="top clear">AC</div>
+        <div class="top plusminus">+/-</div>
+        <div class="top percent">%</div>
+        <div class="op">÷</div>
+        <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div>
+        <div class="op">x</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <div class="op">-</div>
+        <div class="num">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="op">+</div>
+        <div class="num zero">0</div>
+        <div class="num dot">.</div>
+        <div class="op">=</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
